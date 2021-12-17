@@ -73,10 +73,7 @@ const App = () => {
 
   const inputChange = (name, value) => {
     validate(name, value);
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
+    setFormValues({ ...formValues, [name]: value, });
   };
 
   const formSubmit = () => {
@@ -109,15 +106,12 @@ const App = () => {
         <div>
           <h1>Bloom Pizza Factory</h1>
         </div>
-        <nav>
-          <Link to='/' className='nav-link' onClick={reveal}>Home</Link>
-          </nav>
       </header>
 
       {hidden === true ? '' :
-        <section className='to-form'>
-        <div className='background-img'>
-          <div className='to-form content'>
+        <section>
+        <div>
+          <div>
             <h2>Code out your Pizza</h2>
             <Link to="/pizza">
               <button id='order-pizza' onClick={toggleHidden}>Create Pizza</button>
